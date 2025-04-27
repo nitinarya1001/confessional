@@ -1,0 +1,23 @@
+html{
+  background-color: blue;
+}
+
+
+/* footer related CSS */
+@media (min-width: 1023px) {
+  #footer footer ul{
+    justify-content: end !important;
+  }
+}
+@media (max-width: 1023px) {
+  #footer footer {
+    flex-direction: column;
+  }
+  #footer footer p {
+    text-align: center;
+  }
+  #footer footer img {
+    margin-top: 1.5rem;
+  }
+}
+

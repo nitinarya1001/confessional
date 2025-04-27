@@ -3,12 +3,24 @@ from django.shortcuts import render
 # Create your views here.
 def index(request):
     context={
-        "var1" : "This is a bruh"
+        "title" : "Confessional"
     }
     return render( request, "index.html", context)
 
-def about(request):    
+def confess(request):    
     context={
-        "var1" : "This is a ABOUTPAGE"
+        "title" : "Confess"
     }
-    return render(request, "index.html", context)
+    return render(request, "confess.html",context)
+
+def aboutus(request):  
+    context={
+        "title" : "About Us"
+    }  
+    return render(request, "aboutus.html",context)
+
+def contactus(request): 
+    context={
+        "title" : "Contact Us"
+    }   
+    return render(request, "contactus.html",context)
