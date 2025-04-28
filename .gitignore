@@ -1,1 +1,3 @@
 virtenv/
+home/migrations/
+home/__pycache__/
