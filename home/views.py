@@ -6,7 +6,6 @@ DATA = confessions.objects.all()
 # Create your views here.
 def index(request):
     context={
-        "title" : "Confessional",
         "data" : DATA
     }
     
@@ -14,14 +13,11 @@ def index(request):
 
 def confession(request):
     context={
-        "title" : "blog" #change it with the title of confession
     }    
     return render( request, "confessionPage.html", context)
         
-
 def confess(request):    
     context={
-        "title" : "Confess"
     }
     if(request.method == 'POST'):
         title = request.POST.get('title')
@@ -33,14 +29,13 @@ def confess(request):
 
 def aboutus(request):  
     context={
-        "title" : "About Us"
     }  
     return render(request, "aboutus.html",context)
 
 def contactus(request): 
     context={
-        "title" : "Contact Us"
-    }   
+    }  
+     
     if(request.method == 'POST'):
         name = request.POST.get('name')
         email = request.POST.get('email')

@@ -1,27 +1,32 @@
-{% include 'header.html' %}
+{% extends "base.html" %}
+
+{% block title %}Confess{% endblock  %}
+
+{% block content %}
 
 <div class="col text-center p-4 mt-4">
-
-    <h1>Confess</h1>
+  
+  <h1>Confess</h1>
 </div>
 <section class="w-100 p-4 d-flex justify-content-center">
-    <form id="contact-form" class="text-start" style="width: 100%; max-width: 300px" method="post">
-        {%csrf_token%}
-      <!-- Name input -->
-      <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
-        <label class="form-label" for="title" style="margin-left: 0px;">Title</label>
-        <input type="text" id="title" name="title" class="form-control">
+  <form id="contact-form" class="text-start" style="width: 100%; max-width: 300px" method="post">
+    {%csrf_token%}
+    <!-- Name input -->
+    <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
+      <label class="form-label" for="title" style="margin-left: 0px;">Title</label>
+      <input type="text" id="title" name="title" class="form-control">
       <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 42.4px;"></div><div class="form-notch-trailing"></div></div></div>
 
       <!-- Message input -->
       <div data-mdb-input-init="" class="form-outline mb-4" data-mdb-input-initialized="true">
           <label class="form-label" for="confession" style="margin-left: 0px;">Confession</label>
         <textarea class="form-control" id="confession" name="confession" rows="4"></textarea>
-      <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
-
-      <!-- Submit button -->
+        <div class="form-notch"><div class="form-notch-leading" style="width: 9px;"></div><div class="form-notch-middle" style="width: 60px;"></div><div class="form-notch-trailing"></div></div></div>
+        
+        <!-- Submit button -->
       <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
     </form>
   </section>
+  
+{% endblock  %}
 
-{% include 'footer.html' %}
